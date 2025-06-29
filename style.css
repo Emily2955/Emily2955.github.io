@@ -1,61 +1,241 @@
-.flex {
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet");
+
+:root {
+    --color-white: white;
+    --color-serenity: #C4DBE0;
+    --color-turquoise: #2EB5E0;
+    --color-cyan: #00A8A8;
+    --color-midnight-blue: #0C6980;
+    --color-charcoal: #2e3331;
+    --font-feature: "Playfair Display", serif;
+    --font-default: "Source Sans 3", sans-serif;
+    --space-xs: 4px;
+    --space-sm: calc(var(--space-xs) * 2);
+    /*8px*/
+    --space-md: calc(var(--space-sm) * 2);
+    /*16px*/
+    --space-lg: calc(var(--space-md) * 2);
+    /*32px*/
+    --space-xl: calc(var(--space-lg) * 2);
+    /*64px*/
+    --space-2xl: calc(var(--space-xl) * 2);
+    /*128px*/
+}
+
+/*css reset*/
+
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: var(--font-default);
+    color: var(--color-charcoal);
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-feature);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p {
+    line-height: 1.65;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+header {
     display: flex;
-}
-
-
-
-.space-between {
     justify-content: space-between;
-}
-
-.column {
-    flex-direction:column;
+    align-items: center;
+    padding: var(--space-md) var(--space-lg) 0;
 }
 
 .logo {
-    max-height: 100px;
+    max-height: 70px;
     width: auto;
 }
 
-.hero{
-    background-color: #8246af;
-    color: white;
-    padding: 5%;
-    align-items: start;
+/* hamburger menu in mobi  */
+.hamburger-icon {
+  height: 70px;
 }
 
-.padding-small {
-    padding: 8px;
+/* main body section */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    justify-content: center;
+    padding: var(--space-lg);
 }
 
-.padding-medium {
-    padding: 16px;
+/* hero section */
+.hero {
+    background-color: var(--color-midnight-blue);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--space-md);
+    padding: var(--space-lg);
+    gap: var(--space-md);
+
+    .hero_name {
+        text-shadow: 2px 2px 4px #000000;
+    }
 }
 
-.padding-large {
-    padding: 24px;
+h1 {
+    font-size: 2em;
+    text-wrap: balance;
 }
 
-.padding-extralarge {
-    padding: 32px;
+.hero-image {
+    clip-path: ellipse(50% 40%);
 }
+
+
+/* talents and 3 boxes section */
+.talents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+article {
+    background-color: var(--color-serenity);
+    border-radius: var(--space-md);
+    padding: var(--space-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+
+
+    .article-heading {
+        text-shadow: 1px 1px 2px #0C6980;
+    }
+
+    .button {
+        margin-top: var(--space-sm);
+    }
+}
+
 
 .btn-primary {
-    background-color: #ffa300; 
+    background-color: #ffa300;
     color: black;
     padding: 8px;
     text-decoration: none;
     border-radius: 4px;
 }
 
-article img{
-    width: 24px;
+
+
+
+
+
+/* footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: var(--space-sm);
 }
 
-.icon {
-    width: 32px;
+.footer-content {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: var(--space-md); 
 }
 
-.socials-icon{
-    width: 32px;
+.footer-logo {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    footer {
+        justify-content: center;
+    }
+
+    footer .footer-logo {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+
 }
