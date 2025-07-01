@@ -293,7 +293,14 @@ article {
 }
 
 
-
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: var(--space-xs)
+    
+}
 
 
 
