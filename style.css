@@ -298,7 +298,7 @@ article {
 
 .blurb {
     flex: 1;
-    max-width: 786px;
+    max-width: 100%;
 }
 
 .contact-form{
